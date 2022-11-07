@@ -1,0 +1,35 @@
+version: '3'
+
+volumes:
+  mysql_data: {}
+
+networks:
+  back:
+
+services:
+  db:
+    container_name: db
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --lower_case_table_names=1
+    environment:
+      MYSQL_DATABASE: teamproject_db
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - back
+    ports:
+      - 3306:3306
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 4000:80
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - back
+

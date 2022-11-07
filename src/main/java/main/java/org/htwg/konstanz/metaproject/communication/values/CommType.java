@@ -1,0 +1,57 @@
+package main.java.org.htwg.konstanz.metaproject.communication.values;
+
+import main.java.org.htwg.konstanz.metaproject.communication.CommAbstract;
+
+/**
+ * Type of a communication object {@link CommAbstract}.
+ * 
+ * @author SiKelle
+ *
+ */
+public enum CommType {
+
+	METAPROJECT_LEADER_APPOINTMENT,
+
+	PROJECT_LEADER_APPOINTMENT,
+
+	TEAM_LEADER_APPOINTMENT,
+
+	METAPROJECT_LEADER_CHANGE,
+
+	PROJECT_LEADER_CHANGE,
+
+	TEAM_LEADER_CHANGE,
+
+	TEAM_SEND_PRIO,
+
+	ASSIGN_PROJECT_TO_TEAM,
+
+	METAPROJECT_DELETE,
+
+	PROJECT_DELETE,
+
+	TEAM_DELETE,
+
+	TEAM_REMOVE_MEMBER,
+
+	METAPROJECT_ADD_MEMBER,
+	
+	METAPROJECT_LEADER_ADD_TEAM_MEMBER,
+
+	TEAM_INVITE,
+
+	TEAM_REQUEST,
+	
+	TEAM_INVITATION_REJECT,
+	
+	TEAM_INVITATION_WITHDRAW,
+	
+	TEAM_INVITATION_ACCEPT,
+	
+	TEAM_APPLICATION_REJECT,
+	
+	TEAM_APPLICATION_ACCEPT,
+	
+	TEAM_APPLICATION_WITHDRAW,
+	
+}
